@@ -15,20 +15,20 @@
 	<body>
 		<wrapper class="wrapper">
 			<header class="header">
-				<h1>BILLSPLITTER</h1>
-				<span class="header__paragraph">SPLIT UOUTCOMES WITH FRIENDS</span>
+				<h1><a href="index.html"> BILLSPLITTER</a></h1>
+				<span class="header__paragraph">SPLIT COSTS WITH YOUR FRIENDS</span>
 			</header>
 			<main>
 				<div class="wrapper__main">
 					<div class="wrapper-labels">
-						<label for="price">Outcome value:</label>
+						<label for="price">Cost value:</label>
 						<label for="people">number of people:</label>
 						<label for="tip">Tip:</label>
 					</div>
 					<div class="wrapper-inputs">
-						<input class="input" id="price" />
+						<input class="input" placeholder=" zł" id="price" />
 						<input class="input" id="people" />
-						<select  id="tip">
+						<select id="tip">
 							<option value="0" disabled selected>- choose tip value -</option>
 							<option value="0">0</option>
 							<option value="0.05">5%</option>
@@ -39,8 +39,10 @@
 					</div>
 				</div>
 				<button type="button" class="btn" id="count">count</button>
-				<span class="sum-up" id="sum-up">That's <span class="cost" id="cost"></span> zł for each.</span>
-				<span class="error"></span>
+				<span class="sum-up" id="sum-up"
+					>That's <span class="cost" id="cost"></span> zł for each.</span
+				>
+				<span class="error" id="error">Invalid data</span>
 			</main>
 		</wrapper>
 		<script src="index.js"></script>
