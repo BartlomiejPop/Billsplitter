@@ -1,6 +1,6 @@
 countEl = document.getElementById("count");
 
-countEl = document.addEventListener("click", (e) => {
+function countBill() {
 	sumUpEl = document.getElementById("sum-up");
 	priceEl = document.getElementById("price");
 	peopleEl = document.getElementById("people");
@@ -31,4 +31,6 @@ countEl = document.addEventListener("click", (e) => {
 	} else {
 		error();
 	}
-});
+}
+
+countEl.addEventListener("click", countBill);
