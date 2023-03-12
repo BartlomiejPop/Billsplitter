@@ -24,6 +24,12 @@ body {
 	border-radius: 5px;
 }
 
+@media (max-width: 520px) {
+	.wrapper {
+		width: 90%;
+	}
+}
+
 .header {
 	display: flex;
 	flex-direction: column;
@@ -35,6 +41,12 @@ body {
 
 .header__paragraph {
 	margin-top: 10px;
+}
+
+@media (max-width: 520px) {
+	.header__paragraph {
+		text-align: center;
+	}
 }
 
 a {
@@ -64,10 +76,16 @@ main {
 	border-right: 1px solid rgb(210, 210, 210);
 }
 
+@media (max-width: 520px) {
+	.wrapper-labels {
+		padding: 0px 10px;
+		align-items: flex-start;
+	}
+}
+
 label {
 	color: rgb(111, 111, 111);
 	margin-top: 10px;
-	outline: none;
 	border-radius: 5px;
 	cursor: pointer;
 }
@@ -77,6 +95,13 @@ input {
 	outline: none;
 	border-radius: 5px;
 	border: 1px solid rgb(185, 185, 185);
+}
+
+@media (max-width: 520px) {
+	input,
+	select {
+		width: 80%;
+	}
 }
 
 select {
@@ -93,6 +118,13 @@ select {
 	flex-direction: column;
 }
 
+@media (max-width: 520px) {
+	.wrapper-inputs {
+		justify-content: space-between;
+		padding: 0 10px;
+	}
+}
+
 .btn {
 	display: block;
 	margin: 20px auto;
@@ -107,8 +139,10 @@ select {
 	transition: background-color 0.3s;
 }
 
-.btn:hover {
+.btn:hover,
+.btn:focus {
 	background-color: rgb(133, 139, 150);
+	outline: none;
 }
 
 .sum-up {
@@ -130,4 +164,17 @@ select {
 	color: rgb(255, 0, 0);
 	text-align: center;
 	display: none;
+}
+
+svg {
+	position: absolute;
+	top: 50%;
+	right: 2%;
+	fill: rgb(104, 104, 105);
+}
+
+@media (max-width: 520px) {
+	svg {
+		right: 22%;
+	}
 }

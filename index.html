@@ -26,8 +26,17 @@
 						<label for="tip">Tip:</label>
 					</div>
 					<div class="wrapper-inputs">
-						<input class="input" placeholder=" zł" id="price" />
-						<input class="input" id="people" />
+						<div style="position: relative">
+							<input class="input" placeholder=" zł" id="price" />
+							<svg width="10" height="10">
+								<use href="symbol-defs.svg#icon-coin-euro"></use>
+							</svg>
+						</div>
+						<div style="position: relative" ;>
+							<input class="input" id="people" /><svg width="10" height="12">
+								<use href="symbol-defs.svg#icon-group"></use>
+							</svg>
+						</div>
 						<select id="tip">
 							<option value="0" disabled selected>- choose tip value -</option>
 							<option value="0">0</option>

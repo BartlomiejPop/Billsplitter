@@ -1,15 +1,20 @@
-const count = document.addEventListener("click", (e) => {
+countEl = document.getElementById("count");
+
+countEl = document.addEventListener("click", (e) => {
 	sumUpEl = document.getElementById("sum-up");
+	priceEl = document.getElementById("price");
+	peopleEl = document.getElementById("people");
+	tipEl = document.getElementById("tip");
+	costEl = document.getElementById("cost");
+	errorEl = document.getElementById("error");
 
-	const priceEl = document.getElementById("price");
-	const peopleEl = document.getElementById("people");
-	const tipEl = document.getElementById("tip");
-	const costEl = document.getElementById("cost");
-	const errorEl = document.getElementById("error");
-
-	if (peopleEl.value < 1) {
+	const error = (error) => {
 		sumUpEl = sumUpEl.style.display = "none";
 		errorEl.style.display = "block";
+	};
+
+	if (peopleEl.value < 1 || peopleEl.value == "" || priceEl.value == "") {
+		error();
 	}
 
 	costEl.value = +(
@@ -19,11 +24,11 @@ const count = document.addEventListener("click", (e) => {
 
 	costEl.textContent = costEl.value;
 	console.log(costEl.textContent, costEl.value);
+
 	if (costEl.textContent == costEl.value) {
 		sumUpEl = sumUpEl.style.display = "block";
 		errorEl.style.display = "none";
 	} else {
-		sumUpEl = sumUpEl.style.display = "none";
-		errorEl.style.display = "block";
+		error();
 	}
 });
